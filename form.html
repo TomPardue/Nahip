@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Insurance Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <header class="hero-overlay">
+    <div class="hero-logos">
+      <img src="assets/img/logo_Nahip.svg" alt="NAHIP Logo" class="hero-logo" />
+      <img src="assets/img/blue-cross-blue-shield-vector-logo.svg" alt="Blue Cross Logo" class="hero-logo" />
+    </div>
+    <div class="hero-text">
+      <h1>Native American Health Insurance Program</h1>
+      <p>We help you enroll in programs designed for Native Americans for as little as $0 Monthly.</p>
+    </div>
+  </header>
+
+  <main id="form-wrapper">
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Need help or have questions? Our team is here to support you.</p>
+    
+        <div class="contact-info">
+          <p>📞 <strong>Phone:</strong> <a href="tel:4055685058">(405) 568-5058</a></p>
+          <p>📧 <strong>Email:</strong> <a href="mailto:contact@nahip.org">contact@nahip.org</a></p>
+          <p>🕒 <strong>Hours:</strong> Mon–Fri, 8 AM – 6 PM (CST)</p>
+        </div>
+    
+        <form id="contactForm" class="contact-form">
+          <label for="cname">Full Name</label>
+          <input type="text" id="cname" name="name" required placeholder="Your Name">
+    
+          <label for="cphone">Phone</label>
+          <input type="phone" id="cphone" name="phone" required placeholder="123456789">
+    
+          <label for="czip">Zip code</label>
+          <input type="zip" id="czip" name="zip" required placeholder="12345">
+    
+          <label for="cbirthdate">Birthdate</label>
+          <input type="date" id="cbirthdate" name="birthdate" required placeholder="MM/DD/YYYY">
+    
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Native American Health Insurance Program. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </div>
+  </footer>
+  <script src="form.js"></script>
+</body>
+</html>

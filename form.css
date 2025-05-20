@@ -1,0 +1,228 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY con fondo y tipografía */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #024c33;
+  background: url("/assets/img/native-landscape.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Contenedor principal */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* HEADER / HERO OVERLAY */
+.hero-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* logos a la izquierda */
+  gap: 3rem; /* espacio grande entre logos y texto */
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 0 12px 12px; /* solo redondear abajo */
+  background-color: #f0f0f0b5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  z-index: 10;
+}
+
+.hero-logos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  min-width: 220px; /* para que no se achique mucho */
+  justify-content: flex-start;
+}
+
+.hero-logo {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Ajustes tipográficos */
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #024c33;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* FORM WRAPPER */
+#form-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de contacto */
+.section.contact h2 {
+  font-size: 1.5rem;
+  color: #024c33;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section.contact p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+}
+
+.contact-info a {
+  color: #024c33;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Formulario */
+.contact-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.contact-form input {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus {
+  border-color: #024c33;
+  outline: none;
+}
+
+/* Botón */
+button.btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #024c33;
+  color: #ffd76b;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button.btn:hover {
+  background-color: #033f28;
+}
+
+/* FOOTER */
+.footer {
+  background: #003333;
+  color: #aaa;
+  padding: 25px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #6cedf6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:visited {
+  color: #6cedf6;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .hero-overlay {
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* mantengo logos y texto alineados horizontalmente */
+    gap: 2rem;
+  }
+
+  .hero-logos {
+    flex-direction: column; /* logos uno encima de otro */
+    gap: 0.5rem;
+    min-width: auto;
+  }
+
+  .hero-text {
+    min-width: 200px;
+    text-align: left; /* texto a la derecha de logos */
+  }
+}
+
+@media (max-width: 600px) {
+  #form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}

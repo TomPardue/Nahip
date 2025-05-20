@@ -1,0 +1,561 @@
+/* Reset & Base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+.logo {
+  height: 120px;
+}
+
+/* Menú Desktop */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.navbar a {
+  color: #034336;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none; /* por defecto oculto */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003333;
+}
+/* Botones */
+.call-btn {
+  padding: 10px 20px;
+  background-color: #ff9f1c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.call-btn:hover {
+  background: #cc7e17;
+}
+.cta-btn {
+  display: inline-block;
+  background: #00b894;
+  padding: 15px 30px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background .3s;
+  margin-top: 10px;
+}
+.cta-btn:hover {
+  background: #036b53;
+}
+
+/* Hero */
+/* Hero */
+.hero {
+  background: url('assets/img/Affordable Health Coverage for Native Americans!1.jpg') no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea contenido a la derecha */
+  text-align: center;         /* Alinea texto a la derecha */
+  padding-right: 5vw;        /* Espacio desde el borde derecho */
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+  color: #fff;
+  margin-bottom: 15px;
+}
+/* Secciones */
+.section {
+  padding: 80px 0;
+}
+.section.alt {
+  background: #eef6f6;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #004b4b;
+}
+
+/* Tarjetas */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  background: #e6e6e6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  text-align: center;
+  transition: transform .3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.step {
+  background: #fff;
+  border-radius: 20%;
+  flex: 1 1 250px;
+  max-width: 280px;
+  text-align: center;
+  padding: 10px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c7be5;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  color: #004b4b;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Línea entre pasos */
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: #2c7be5;
+  align-self: center;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #004b4b;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 1.2rem;
+  color: #2c7be5;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: "−";
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 15px 15px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+#programs ul {
+  list-style: disc inside;
+  max-width: 700px;
+  margin: 20px auto 0 auto;
+  color: #004b4b;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#programs ul li {
+  margin-bottom: 12px;
+}
+
+/* Eligibility & Enrollment Section */
+#eligibility ol {
+  max-width: 700px;
+  margin: 20px auto 30px auto;
+  padding-left: 20px;
+  color: #004b4b;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#eligibility ol li {
+  margin-bottom: 12px;
+}
+
+/* Testimonials Section */
+#testimonials .testimonial {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 15px auto;
+  font-style: italic;
+  color: #333;
+  position: relative;
+}
+#testimonials blockquote {
+  margin-bottom: 10px;
+  quotes: "“" "”" "‘" "’";
+}
+#testimonials blockquote:before {
+  content: open-quote;
+  font-size: 2rem;
+  color: #2c7be5;
+  vertical-align: top;
+  margin-right: 5px;
+}
+#testimonials cite {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  color: #004b4b;
+}
+
+/* Get Started Section */
+#get-started p {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  font-size: 1.1rem;
+  color: #004b4b;
+  text-align: center;
+}
+#get-started .cta-btn {
+  display: block;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background: #00b894;
+  color: white;
+  transition: background 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  
+}
+#get-started .cta-btn:hover {
+  background: #009874;
+  text-decoration: none;
+}
+
+/* Contact Section */
+.contact .container {
+  max-width: 600px;
+  margin: auto;
+  color: #004b4b;
+  padding: 2rem 1rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact .contact-info {
+  margin-bottom: 30px;
+}
+
+.contact .contact-info p {
+  margin: 8px 0;
+}
+
+.contact .contact-info a {
+  color: #ff9f1c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact .contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 2px solid #ff9f1c;
+  box-shadow: 0 0 5px rgba(255, 159, 28, 0.5);
+}
+
+.contact-form button.btn {
+  background-color: #ff9f1c;
+  color: white;
+  padding: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.btn:hover {
+  background-color: #cc7e17;
+}
+
+/* Footer */
+.footer {
+  background: #003333;
+  color: #aaa;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex; /* ← Cambia de block a flex */
+  flex-direction: column; /* Apila verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  gap: 10px;
+  padding: 0 20px;
+  text-align: center;
+}
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ← Centra los ítems */
+  gap: 20px;
+  padding-left: 0;
+  margin: 0;
+}
+.footer-nav a {
+  color: #6cedf6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.footer p {
+  margin: 5px 0;
+  text-align: center;
+}
+.footer a {
+  color: #6cedf6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:visited {
+  color: #6cedf6;
+}
+
+
+/* Toggle móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #034336;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Logo izquierda, toggle derecha */
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .logo {
+    height: 60px; /* ajusta si quieres */
+  }
+
+  .call-btn {
+    display: none; /* ocultar CTA en móviles */
+  }
+
+  .menu-toggle {
+    display: block; /* mostrar toggle en móvil */
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px; /* justo debajo del header */
+    right: 20px; /* pegar a la derecha, no a todo el ancho */
+    width: 250px; /* ancho fijo más pequeño */
+    background: #f9f9f9; /* fondo claro */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: none;
+    padding: 15px 0;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start; /* alinear a la izquierda */
+    gap: 10px;
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .navbar li {
+    list-style: none;
+    width: 100%;
+  }
+
+  .navbar a {
+    color: #003333; /* texto oscuro para buen contraste */
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  .navbar a:hover {
+    background-color: #e0e0e0;
+    color: #005555;
+  }
+  .hero {
+    justify-content:center;
+    text-align: center;         /* Alinea texto a la derecha */
+    padding:0 3vw;  
+  }
+
+  .hero-overlay {
+  margin-top: 400px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 40px;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+  color: #fff;
+  max-height: 50px;
+}
+  /* CTA de sección (hero/contact) sí puede seguir siendo full width */
+  .cta-btn {
+      width: 100%;
+  }
+
+  /* Pero el botón de llamada del header queda en auto */
+  .call-btn {
+      width: 200px;        /* <-- aquí */
+      text-align: center;
+      margin-right: 15px;          /* si antes le dabas margin-top, quítalo */
+  }
+  .steps {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .line {
+      width: 2px;
+      height: 30px;
+  }
+  .cards {
+      flex-direction: column;
+  }
+}
