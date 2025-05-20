@@ -28,15 +28,15 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   })
     .then(response => {
       if (response.ok) {
-        alert("¡Formulario enviado con éxito!");
+        alert("Message sent successfully!");
         form.reset();
       } else {
-        throw new Error("Error en el envío.");
+        throw new Error("There was an error submitting the form.");
       }
     })
     .catch(error => {
       console.error("Error:", error);
-      alert("Ocurrió un error al enviar el formulario.");
+      alert("There was an error submitting the form.");
     })
     .finally(() => {
       submitBtn.disabled = false;
