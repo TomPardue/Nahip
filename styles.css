@@ -288,6 +288,10 @@ body {
   vertical-align: top;
   margin-right: 5px;
 }
+.testimonial-img {
+  height: 60px;
+  border-radius: 100%; /* para que se vean redondas */
+}
 #testimonials cite {
   display: block;
   text-align: right;
