@@ -29,8 +29,18 @@ body {
   padding: 10px 20px;
   position: relative;
 }
-.logo {
-  height: 120px;
+.hero-logos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  min-width: 220px;
+}
+
+.hero-logo {
+  width: 120px;
+  flex-shrink: 0;
 }
 
 /* Menú Desktop */
@@ -458,9 +468,6 @@ body {
     position: relative;
   }
 
-  .logo {
-    height: 60px; /* ajusta si quieres */
-  }
 
   .call-btn {
     display: none; /* ocultar CTA en móviles */
