@@ -533,7 +533,7 @@ body {
 
   .hero-overlay h1,
   .hero-overlay p {
-    max-height: 50px;
+    max-height: 70px;
     text-align: center;
   }
   /* CTA de sección (hero/contact) sí puede seguir siendo full width */
