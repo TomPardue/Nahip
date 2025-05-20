@@ -85,24 +85,23 @@ body {
 .hero {
   background: url('assets/img/Affordable Health Coverage for Native Americans!1.jpg') no-repeat center/cover;
   height: 90vh;
+  position: relative; /* para que hero-overlay absoluto se posicione respecto a hero */
   display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Alinea contenido a la derecha */
-  text-align: center;         /* Alinea texto a la derecha */
-  padding-right: 5vw;        /* Espacio desde el borde derecho */
+  align-items: flex-start; /* para que overlay quede arriba */
+  justify-content: flex-start; /* para que overlay quede a la izquierda */
+  padding: 0;
 }
 
 .hero-overlay {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  text-align: center;
   background: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 10px;
   max-width: 300px;
-}
-
-.hero-overlay h1,
-.hero-overlay p {
   color: #fff;
-  margin-bottom: 15px;
 }
 /* Secciones */
 .section {
@@ -516,25 +515,27 @@ body {
     color: #005555;
   }
   .hero {
-    justify-content:center;
-    text-align: center;         /* Alinea texto a la derecha */
-    padding:0 3vw;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3vw;
   }
 
   .hero-overlay {
-  margin-top: 400px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 5px 40px;
-  border-radius: 10px;
-  max-width: 100%;
-  max-height: 250px;
-}
+    position: static; /* vuelve a flujo normal */
+    margin-top: 400px; /* como tenías antes */
+    max-width: 100%;
+    max-height: 250px;
+    padding: 5px 40px;
+    border-radius: 10px;
+  }
 
-.hero-overlay h1,
-.hero-overlay p {
-  color: #fff;
-  max-height: 50px;
-}
+  .hero-overlay h1,
+  .hero-overlay p {
+    max-height: 50px;
+    text-align: center;
+  }
   /* CTA de sección (hero/contact) sí puede seguir siendo full width */
   .cta-btn {
       width: 100%;
