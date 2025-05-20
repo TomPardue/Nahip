@@ -273,21 +273,21 @@
       method: "POST",
       body: formData
     })
-    .then(response => {
-      if (response.ok) {
-        alert("¡Mensaje enviado con éxito!");
-        form.reset();
-      } else {
-        throw new Error("Error al enviar el formulario");
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("Hubo un problema al enviar el formulario.");
-    })
-    .finally(() => {
-      submitBtn.disabled = false;
-    });
+.then(response => {
+  if (response.ok) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    throw new Error("There was an error submitting the form.");
+  }
+})
+.catch(error => {
+  console.error("Error:", error);
+  alert("There was a problem submitting the form.");
+})
+.finally(() => {
+  submitBtn.disabled = false;
+});
   });
 </script>
 </body>
