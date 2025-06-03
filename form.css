@@ -82,6 +82,7 @@ main {
 /* FORM WRAPPER */
 #form-wrapper {
   background: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
   padding: 2rem;
   border-radius: 10px;
   max-width: 600px;
