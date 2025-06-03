@@ -57,7 +57,6 @@ main {
   border-radius: 10px; /* opcional, por estética */
   object-fit: cover; /* o 'contain', según lo que quieras */
 }
-
 .hero-text {
   flex: 1;
   min-width: 200px;
@@ -225,7 +224,7 @@ button.btn:hover {
     gap: 0.5rem;
     min-width: auto;
   }
-
+  
   .hero-text {
     min-width: 200px;
     text-align: left; /* texto a la derecha de logos */
