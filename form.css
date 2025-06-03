@@ -51,6 +51,14 @@ main {
   width: 100px;
   flex-shrink: 0;
 }
+.hero-form {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto; /* centrado y espacio inferior */
+  border-radius: 10px; /* opcional, por estética */
+  object-fit: cover; /* o 'contain', según lo que quieras */
+}
 
 .hero-text {
   flex: 1;
