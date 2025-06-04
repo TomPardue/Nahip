@@ -248,6 +248,9 @@ button.btn:hover {
     gap: 0.5rem;
     min-width: auto;
   }
+  .hero-logo {
+    width: 80px;
+  }
   
   .hero-text {
     font-size: 1rem;
@@ -290,7 +293,9 @@ button.btn:hover {
   #form-wrapper h2{
     font-size: 1rem;
   }
-
+  .hero-logo {
+    width: 50px;
+  }
   .section.contact h2 span {
     font-size: 1rem;
     color: #d90c16;
